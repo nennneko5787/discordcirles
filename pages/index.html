@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>でぃすこーどサークルズ！</title>
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="トップページ">
+    <meta property="og:site_name" content="でぃすこーどサークルズ！">
+    <meta property="og:description" content="参加しているDiscordサーバーでポイントを獲得し、景品を獲得することができます">
+    <meta property="og:url" content="https://dcircles.f5.si/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <!-- End Open Graph Protocol -->
+    <meta name="title" content="でぃすこーどサークルズ！">
+    <meta name="description" content="参加しているDiscordサーバーでポイントを獲得し、景品を獲得することができます">
+    <meta name="keywords" content="discord,でぃすこーど,ディスコード,でぃすこ,ディスコ,さーばー,サーバー,server">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="revisit-after" content="1 day">
+    <meta name="description" content="Japanese">
+    <meta name="author" content="nennneko5787">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Noto Sans JP", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .loader {
+            border: 12px solid var(--bs-secondary-bg);
+            border-radius: 50%;
+            border-top: 12px solid var(--bs-primary);
+            width: 100px;
+            height: 100px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .topimg {
+            width: 10%;
+            height: 10%;
+        }
+
+        .server {
+            border: solid 2px;
+            border-color: var(--bs-border-color);
+            border-radius: 10px;
+            margin: 1px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .server img {
+            width: 50%;
+            height: 50%;
+            margin-right: 10px;
+        }
+
+        .server {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brook-after {
+            width: 400px;
+            transform: rotate(-45deg);
+            transform-origin: top center;
+            position: absolute;
+            top: 20px;
+            left: -180px;
+            padding: 15px 143.44px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .nsfw-bg {
+            margin: 0;
+            overflow: hidden; /* 画面外にコンテンツがはみ出さないようにする */
+            background: repeating-linear-gradient(
+                110deg,
+                #000,
+                #000 10px,
+                #FFD700 10px,
+                #FFD700 20px
+            );
+            background-size: 200% 100%;
+            animation: moveBg 5s linear infinite;
+        }
+
+        @keyframes moveBg {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 0%;
+            }
+        }
+
+        .outlined-text {
+            font-size: 110%;
+            color: white;
+            -webkit-text-stroke: 1px black; /* ストロークの幅を維持 */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="nav-link active" aria-current="page" href="/">でぃすこーどサークルズ！</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">サポートサーバー(準備中)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.com/oauth2/authorize?client_id=1273157254035804216">ボットを導入</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <h2>ルール</h2>
+        <ul>
+            <li>でぃすこーどサークルズ！のイベント中に参加しているサーバーでメッセージを送信するとポイントを獲得することができます。</li>
+            <li>獲得できるポイントの量はサーバーによって異なり、さらに1時間ごとに獲得できるポイントの量は変動します。</li>
+            <li>ポイントを獲得できるのは午前6時00分から午前0時00分までです。</li>
+            <li>毎日午前0時00分にポイントはリセットされ、それまでに獲得していたポイントを元にランクが加算されます。</li>
+            <li>イベント終了時に所持しているランクが多い順から1位、2位、3位のユーザーには景品を贈呈します。</li>
+        </ul>
+        <h2>サーバー主へ: 参加方法</h2>
+        <li><a href="https://discord.com/oauth2/authorize?client_id=1273157254035804216">ボットを導入</a>してください。</li>
+        <h2>参加しているサーバー一覧</h2>
+        <div class="row align-items-start" id="servers" style="display: flex; justify-content: center; align-items: center;">
+            <div style="display: flex; justify-content: center; align-items: center;"><div class="loader"></div></div>
+        </div>
+    </div>
+
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 py-5 my-5 border-top">
+        <div class="col mb-4">
+            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" style="margin-left: 10px;">
+                <h6>でぃすこーどサークルズ！</h6>
+            </a>
+        </div>
+
+        <div class="col mb-4"></div>
+
+        <div class="col mb-4">
+            <h5>ページ</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">ホーム</a></li>
+            </ul>
+        </div>
+
+        <div class="col mb-4">
+            <h5>おすすめボカロ</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="https://www.youtube.com/watch?v=8uV_czuhdjc" class="nav-link p-0 text-body-secondary">悪役にキスシーンを</a></li>
+                <li class="nav-item mb-2"><a href="https://www.youtube.com/watch?v=TXzfQ0cP1P0" class="nav-link p-0 text-body-secondary">恋愛裁判</a></li>
+                <li class="nav-item mb-2"><a href="https://www.youtube.com/playlist?list=PLD4GDVLEEp6wi73_170Dmv_QC_KyOc7Yp" class="nav-link p-0 text-body-secondary">... and more</a></li>
+            </ul>
+        </div>
+
+        <div class="col mb-4">
+            <h5>その他</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="https://www.nennneko5787.net/" class="nav-link p-0 text-body-secondary">運営者</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        async function loadServers() {
+            let response = await fetch("/api/getservers");
+            let jsonData = await response.json();
+            console.log(jsonData);
+
+            document.getElementById("servers").innerHTML = "";
+
+            jsonData.forEach(server => {
+                let element = document.createElement("div");
+                element.className = "col-md-3 server d-flex align-items-center";
+
+                let serverImage = document.createElement("img");
+                serverImage.src = server.icon;
+                serverImage.alt = "Server Icon";
+                serverImage.setAttribute("loading", "lazy");
+                element.appendChild(serverImage);
+
+                let serverDetails = document.createElement("div");
+
+                let serverName = document.createElement("h5");
+                let serverNameLink = document.createElement("a");
+                serverNameLink.innerHTML = server.name;
+                serverNameLink.style = "text-decoration: none; color: var(--bs-body-color);";
+                serverNameLink.href = `/servers/${server.id_str}`;
+                serverName.appendChild(serverNameLink);
+                serverDetails.appendChild(serverName);
+
+                let serverMembers = document.createElement("p");
+                serverMembers.innerText = `サーバーメンバー数: ${server.memberCount}`;
+                serverDetails.appendChild(serverMembers);
+
+                element.appendChild(serverDetails);
+
+                document.getElementById("servers").appendChild(element);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            await loadServers();
+        });
+    </script>
+</html>
