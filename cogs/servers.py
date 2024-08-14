@@ -69,6 +69,13 @@ class ServersCog(commands.Cog):
         self, interaction: discord.Interaction, type: RankingTypes
     ):
         await interaction.response.defer()
+        if not bool(
+            await DataBase.pool.fetchval(
+                "SELECT value FROM metadata WHERE key = $1", "isevent"
+            )
+        ):
+            await interaction.followup.send("現在はイベント期間中ではありません")
+            return
         if type == RankingTypes.Point:
             users = await DataBase.pool.fetch(
                 "SELECT * FROM users ORDER by point DESC LIMIT 10 OFFSET 0;"
@@ -95,6 +102,15 @@ class ServersCog(commands.Cog):
     )
     async def statusCommand(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
+        if not bool(
+            await DataBase.pool.fetchval(
+                "SELECT value FROM metadata WHERE key = $1", "isevent"
+            )
+        ):
+            await interaction.followup.send(
+                "現在はイベント期間中ではありません", ephemeral=True
+            )
+            return
         user = await DataBase.pool.fetchrow(
             "SELECT * FROM users WHERE id = $1", interaction.user.id
         )
